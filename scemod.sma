@@ -439,7 +439,7 @@ public TeleportToPlayer(id)
 	new target = find_player("a", arg1);
 	get_user_origin(target, origin);
 	if(target && is_user_alive(target)){
-		client_print(0, print_chat, "[SC-EModü] ADMIN %s: Oyuncuya isinlandiniz: %s", name, arg1);
+		client_print(0, print_chat, "[SC-EMod] ADMIN %s: Oyuncuya isinlandiniz: %s", name, arg1);
 		set_user_origin(id, origin);
 	}
     return PLUGIN_HANDLED;
@@ -456,7 +456,7 @@ public BringPlayer(id)
 	new target = find_player("a", arg1);
 	get_user_origin(id, origin);
 	if(target && is_user_alive(target)){
-		client_print(0, print_chat, "[SC-EModü] ADMIN %s: Oyuncu size isinlandi: %s", name, arg1);
+		client_print(0, print_chat, "[SC-EMod] ADMIN %s: Oyuncu size isinlandi: %s", name, arg1);
 		set_user_origin(target, origin);
 	}
     return PLUGIN_HANDLED;
@@ -483,7 +483,7 @@ public PlayerLoc(id)
 	new target = find_player("a", arg1);
 	get_user_origin(target, origin);
 	if(is_user_alive(target)){
-		client_print(id, print_chat, "[SC-EModü] Oyuncuya isinlanma istegi gonderildi: %s", arg1);
+		client_print(id, print_chat, "[SC-EMod] Oyuncuya isinlanma istegi gonderildi: %s", arg1);
 		new title[128];
 		format(title, 128, "\r%s size isinlanmak istiyor. Kabul ediyor musunuz?", name);
 		new menu = menu_create(title, "telereqmenu_handler");
@@ -506,7 +506,7 @@ public PlayerLoc(id)
 					get_user_name(id, name, 24);
 					menu_item_getinfo(menu, item, _access, targetName, 128, targetNameName, 64, item_callback);
 					new target = find_player("a", targetName);
-					client_print(target, print_chat, "[SC-EModü] %s isinlanma istegini kabul etti", name);
+					client_print(target, print_chat, "[SC-EMod] %s isinlanma istegini kabul etti", name);
 					new origin[3];
 					get_user_origin(id, origin);
 					set_user_origin(target, origin);
@@ -520,7 +520,7 @@ public PlayerLoc(id)
 public SaveLoc(id)
 {
 	if(is_user_alive(id)){
-		client_print(id, print_chat, "[SC-EModü] Basariyla lokasyon kaydedildi. Daha sonra 5 TL karsiliginda /teleport yazarak buraya isinlanabilirsiniz");
+		client_print(id, print_chat, "[SC-EMod] Basariyla lokasyon kaydedildi. Daha sonra 5 TL karsiliginda /teleport yazarak buraya isinlanabilirsiniz");
 		new origin[3];
 		get_user_origin(id, origin);	
 		loc[id] = origin;
@@ -529,24 +529,11 @@ public SaveLoc(id)
 }
 public TeleportLoc(id)
 {
-				new szKey[40];
-				formatex( szKey , charsmax( szKey ) , "%sMONEY" , g_szAuthID[id] );
-				new iMoney = nvault_get( g_Vault , szKey );
-				if(iMoney >= 5){
-					set_user_origin(id, loc[id]);
-					new szKey[40];
-					formatex( szKey , charsmax( szKey ) , "%sMONEY" , g_szAuthID[id] );
-					new iMoney = nvault_get( g_Vault , szKey );
-					new newMoney = iMoney - 5;
-					new szMoney[7];        //Data holder for the money amount
-					new szKey2[40];        //Key used to save money "STEAM_0:0:1234MONEY"
-
-					formatex( szMoney , charsmax( szMoney ) , "%d" , newMoney );
-					
-					nvault_set( g_Vault , szKey , szMoney );
-				}
-				else{
-					client_print(id, print_chat, "[SC-EMod] Bakiyeniz yetersiz.");
+				if(is_user_alive(id)){
+					new menu = menu_create( "\rKaydedilen lokasyona isinlan?", "telemenu_handler" );
+					menu_additem( menu, "\wEvet", "", 0 );
+					menu_additem( menu, "\wHayir", "", 0 );
+					menu_display( id, menu, 0 );
 				}
 				return PLUGIN_HANDLED;
  }
@@ -786,10 +773,10 @@ public TeleportLoc(id)
 					new szMoney[7];        //Data holder for the money amount
 					new szKey2[40];        //Key used to save money "STEAM_0:0:1234MONEY"
 
-					formatex( szKey2 , charsmax( szKey2 ) , "%sMONEY" , g_szAuthID[id] );
+					formatex( szKey , charsmax( szKey ) , "%sMONEY" , g_szAuthID[id] );
 					formatex( szMoney , charsmax( szMoney ) , "%d" , newMoney );
 					
-					nvault_set( g_Vault , szKey2 , szMoney );
+					nvault_set( g_Vault , szKey , szMoney );
 				}
 				else{
 					client_print(id, print_chat, "[SC-EMod] Bakiyeniz yetersiz.");
