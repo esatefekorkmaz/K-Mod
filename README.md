@@ -1,5 +1,5 @@
 # K-Mod
-Extra admin commands, much basic shop menu and any other extra features for Sven Co-op. Shared for portfolio.
+Extra admin commands, buy menu and any other extra features for Sven Co-op. Shared for portfolio.
 
 Note: Commands from K-Mod are used with Advanced Say Commands by Lt.Ibrahim. You have to prefer say commands from chat to use SC-EMod commands.
 
