@@ -1,7 +1,7 @@
-# SC-EMod
+# K-Mod
 Extra admin commands, much basic shop menu and any other extra features for Sven Co-op. Shared for portfolio.
 
-Note: Commands from SC-EMod are used with Advanced Say Commands by Lt.Ibrahim. You have to prefer say commands from chat to use SC-EMod commands.
+Note: Commands from K-Mod are used with Advanced Say Commands by Lt.Ibrahim. You have to prefer say commands from chat to use SC-EMod commands.
 
 <b>Examples:</b>
 
@@ -37,9 +37,9 @@ Note: Commands from SC-EMod are used with Advanced Say Commands by Lt.Ibrahim. Y
 • /bring target - Teleport target to yourself.<br>
 • /survival - Toggling survival mode<br>
 • /classic - Toggling classic mode<br>
-• /saveloc - Save current location.<br>
-• /playerloc target - Request teleporting to target.<br>
-• /teleport - Teleporting to saved location.<br>
+• /s - Save current location.<br>
+• /tpr target - Request teleporting to target.<br>
+• /t - Teleporting to saved location.<br>
 • /buy - Access to shop menu.<br>
 • /shop - Same with /buy.<br>
 • /gift target money - Gift money to target<br>
