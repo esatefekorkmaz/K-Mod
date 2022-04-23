@@ -6,7 +6,7 @@
 #include <nvault>
 #include <ibm_say>
 #include <xp_weapon>
-#define VERSION "1.0.1"
+#define VERSION "1.0.0"
 #define BUYMENU_VERSION "1.0.1"
 #define AUTHOR "korki635"
 new loc[33][3];
