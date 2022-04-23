@@ -40,6 +40,6 @@ Note: Commands from K-Mod are used with Advanced Say Commands by Lt.Ibrahim. You
 • /s - Save current location.<br>
 • /tpr target - Request teleporting to target.<br>
 • /t - Teleporting to saved location.<br>
-• /buy - Access to shop menu.<br>
+• /buy - Access to buy menu.<br>
 • /shop - Same with /buy.<br>
 • /gift target money - Gift money to target<br>
