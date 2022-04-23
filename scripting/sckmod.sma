@@ -177,8 +177,8 @@ public ShowData(){
 		get_user_name(i, name, 24);
 		if(is_user_connected(i) && nvault_get( g_Vault , szKey , szData , charsmax( szData ) ))
 		{
-			set_hudmessage(50,135,180,0.0,0.825,0,1.0,255.0,0.0,0.0,31)
-			show_hudmessage(i, "------> K-Mod: %s <------^n- Merhaba %s^n- Bakiyeniz: %i TL^n- github: esatefekorkmaz", VERSION, name, iMoney);
+			set_hudmessage(50,135,180,0.0,0.25,0,1.0,255.0,0.0,0.0,31)
+			show_hudmessage(i, "Merhaba %s^nBakiyeniz: %i TL", name, iMoney);
 			if(!is_user_alive(i)){
 				new menu = menu_create( "\r100 TL karsiliginda yeniden canlandir?", "revmenu_handler" );
 				menu_additem( menu, "\wEvet", "", 0 );
