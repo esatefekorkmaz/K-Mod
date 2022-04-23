@@ -23,7 +23,7 @@ public plugin_init()
 {
     register_plugin("K-Mod", VERSION, AUTHOR);
     register_forward(FM_GetGameDescription,"change_gamename");
-	set_task(120.0, "ECommandsText");
+	set_task(120.0, "KModText");
 	set_task(60.0, "GiveTL");
 	set_task(1.0, "ShowData");
 	get_configsdir(weaponfilename,255)
@@ -128,7 +128,7 @@ public read_items()
 public plugin_cfg()
 {
     //Open our vault and have g_Vault store the handle.
-    g_Vault = nvault_open( "emodvault" );
+    g_Vault = nvault_open( "kmodvault" );
 
     //Make the plugin error if vault did not successfully open
     if ( g_Vault == INVALID_HANDLE )
@@ -158,9 +158,9 @@ public change_gamename()
 	forward_return(FMV_STRING,g);
 	return FMRES_SUPERCEDE;
 } 
-public ECommandsText(){
+public KModText(){
 	client_print(0, print_chat, "[K-MOD] v%s by %s", VERSION, AUTHOR);
-	set_task(120.0, "ECommandsText");
+	set_task(120.0, "KModText");
 	return PLUGIN_HANDLED;
 }
 public ShowData(){
