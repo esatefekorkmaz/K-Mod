@@ -43,3 +43,6 @@ Note: Commands from K-Mod are used with Advanced Say Commands by Lt.Ibrahim. You
 • /buy - Access to buy menu.<br>
 • /shop - Same with /buy.<br>
 • /gift target money - Gift money to target<br>
+
+# Known Issues
+Godmode is incompatible with SCXPM. Use SCXPM's godmode commands instead.
