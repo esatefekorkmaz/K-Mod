@@ -10,7 +10,7 @@ Note: Commands from K-Mod are used with Advanced Say Commands by Lt.Ibrahim. You
 • "say /god Metal 1"
 
 # Features
-• Shop Menu
+• Buy Menu
 
 • Respawn Where Died
 
