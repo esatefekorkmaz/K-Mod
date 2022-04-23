@@ -28,7 +28,7 @@ Note: Commands from K-Mod are used with Advanced Say Commands by Lt.Ibrahim. You
 • /give target item - Gives an item to target.<br>
 • /model target model - Setting the model of target.<br>
 • /name target name - Setting the name of target.<br>
-• /resetplayer target - Reset players EMod stats.<br>
+• /resetplayer target - Reset players K-Mod stats.<br>
 • /setmoney target money - Setting the money of target.<br>
 • /addmoney target money - Adding money to target.<br>
 • /getmoney target - Get money of target.<br>
