@@ -6,8 +6,8 @@
 #include <nvault>
 #include <ibm_say>
 #include <xp_weapon>
-#define VERSION "1.0.0"
-#define BUYMENU_VERSION "1.0.0"
+#define VERSION "1.0.1"
+#define BUYMENU_VERSION "1.0.1"
 #define AUTHOR "korki635"
 new loc[33][3];
 new g_Vault;               //Global var to hold our vault handle
@@ -34,6 +34,7 @@ public plugin_init()
 	format(itemfilename,255,"%s/km_items.ini",itemfilename)
 	register_clcmd("say buy", "BuyMenu");
 	register_clcmd("say shop", "BuyMenu");
+	register_clcmd("npc_return", "BuyMenu"); // npc_return is binded to B default, so using B key will show the buy menu
 	read_weapons();
 	read_ammos();
 	read_items();
@@ -624,6 +625,7 @@ public TeleportLoc(id)
 		menu_additem( menu, "\wEsyalar", "", 0 );
 		menu_display( id, menu, 0 );
 	}
+	return PLUGIN_CONTINUE;
  }
  public shopmenu_handler( id, menu, item )
  {
