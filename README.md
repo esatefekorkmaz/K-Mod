@@ -7,7 +7,7 @@ Note: Commands from K-Mod are used with Advanced Say Commands by Lt.Ibrahim. You
 
 • "say /buy"
 
-• "say /god Metal 1"
+• "say /god Korki 1"
 
 # Features
 • Buy Menu
