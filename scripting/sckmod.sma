@@ -16,7 +16,7 @@
 
 #define VERSION "1.0.0"
 #define BUYMENU_VERSION "1.0.1"
-#define AUTHOR "Korki"
+#define AUTHOR "knfc"
 new loc[33][3];
 new g_Vault; //Global var to hold our vault handle
 new g_szAuthID[33][35]; //Global array to store auth ids of players
